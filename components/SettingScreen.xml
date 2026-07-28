@@ -1,0 +1,33 @@
+<component name="SettingScreen" extends="Group" initialFocus="btnRateUs">
+    <script type="text/brightscript" uri="SettingScreen.brs"  />
+      	<script type="text/brightscript" uri="pkg:/components/NavBar.brs" />
+
+    <interface>
+        
+    </interface>
+    <children>
+        <Rectangle width="1920" height="1080" translation="[0,0]" color="#121213" />
+         <Button id="btnRateUs" translation="[240,320]" height="128" minWidth="536"
+            maxWidth="536" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/raF.png"
+            focusFootprintBitmapUri="pkg:/images/raUF.png" />
+
+             <Button id="btnShare" translation="[240,632]" height="128" minWidth="536"
+            maxWidth="536" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/saF.png"
+            focusFootprintBitmapUri="pkg:/images/saUF.png" />
+
+             <Button id="btnContact" translation="[240,476]" height="128" minWidth="536"
+            maxWidth="536" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/cuF.png"
+            focusFootprintBitmapUri="pkg:/images/cuUF.png" />
+
+            <Poster id="QRPoster" uri="pkg:/images/ruQR.png" translation="[1202,334]" width="400" height="414" />
+
+                <Poster  uri="pkg:/images/settingBG.png" translation="[1342,112]" width="578" height="968" />
+
+
+             <NavBar id="navBar" />
+    </children>
+    
+</component>

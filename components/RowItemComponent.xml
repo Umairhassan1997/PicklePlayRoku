@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+
+ 
+<component name="SimpleRowListItemData" extends="ContentNode">
+ 
+<interface> 
+  <field id="videoTitle" type="string" />
+  <field id="groupTitle" type="string" />
+  <field id="url" type="string" />
+  <field id="is4k" type="Boolean" />
+  <field id="isvideo" type="Boolean" />
+   <field id="imagePath" type="string" />
+   <field id="videoPath" type="string" />
+   <field id="mediaId" type="string" />
+   <field id="type" type="string" />
+    <field id="creationDate" type="string" />
+    <field id="language" type="string"/>
+    
+    <field id="focusUri" type="uri" />
+    <field id="unfocusUri" type="uri" />
+     <field id="currentIndex" type="integer" />
+
+
+ 
+
+    <field id="description" type="string" />
+
+
+
+ <!-- <field id="labelText" type="string" />
+  <field id="posterUrl" type="string" /> !-->
+</interface> 
+
+</component>

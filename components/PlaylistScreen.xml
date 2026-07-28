@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="PlaylistScreen" extends="Group">
+  <script type="text/brightscript" uri="pkg:/components/PlaylistScreen.brs" />
+	<script type="text/brightscript" uri="pkg:/components/VerifySubscription.brs" />
+    <script type="text/brightscript" uri="pkg:/components/Managers/SubscriptionManager.brs" />
+  	<script type="text/brightscript" uri="pkg:/components/NavBar.brs" />
+
+  
+  <interface>
+    <field id="isSubscribed" type="boolean" alwaysNotify="true" />
+        <field id="btnHomeSelected" alias="btnHome.buttonSelected" />
+
+
+  </interface>
+  <children>
+
+        <Timer duration="0.1" id="FocusTimer" repeat="false" />
+
+      
+    <Rectangle translation="[0,0]" width="1920" height="1080" color="0x131314" />
+
+      <MarkupGrid 
+            id="playlist"
+            translation="[256,47]"
+            itemComponentName = "HeroItem"
+            numColumns = "3"
+            numRows="3"
+            itemSize = "[503, 366]"
+            itemSpacing = "[ 10, 120 ]"
+             visible = "true"
+             drawFocusFeedback="false"
+             focusBitmapUri="pkg:/images/ThF.png" />
+             <Group id="loader" visible="false">
+              <BusySpinner id = "playlistSpinner"/>
+
+       </Group>
+
+        <NavBar id="navBar" />
+
+          <Group id="noContGroup" translation="[0,0]" width="1920" height="1080" visible="false" >
+             <Button id="btnHome" translation="[612,212]" height="656" minWidth="696"
+            maxWidth="696" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/NoCont.png"
+            focusFootprintBitmapUri="pkg:/images/NoContUF.png" />
+
+             </Group>
+
+            
+
+           
+  </children>
+</component>

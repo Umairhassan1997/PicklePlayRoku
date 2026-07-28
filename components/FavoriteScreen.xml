@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="FavoriteScreen" extends="Group">
+  <script type="text/brightscript" uri="pkg:/components/FavoriteScreen.brs" />
+	<!-- <script type="text/brightscript" uri="pkg:/components/VerifySubscription.brs" /> -->
+    <script type="text/brightscript" uri="pkg:/components/NavBar.brs" />
+
+  
+  <interface>
+    <field id="isSubscribed" type="boolean" alwaysNotify="true" />
+        <field id="btnHomeSelected" alias="btnHome.buttonSelected" />
+
+
+  </interface>
+  <children>
+          <Timer duration="0.1" id="FocusTimer" repeat="false" />
+
+    <Rectangle translation="[0,0]" width="1920" height="1080" color="0x121212" />
+
+      <Rowlist 
+            id="row_List"
+            translation="[238,78]"
+            itemComponentName = "PackItem"
+            
+            numRows="3"
+            itemSize = "[1500, 400]"
+            rowItemSize="[[424, 281]]"
+            itemSpacing = "[ 27, 27 ]"
+             visible = "true"
+             rowFocusAnimationStyle = "floatingFocus"
+            showRowLabel = "true"
+             drawFocusFeedback="false"
+             focusBitmapUri="pkg:/images/focus.png"
+              rowItemSpacing = "[ [40, 40] ]"
+            />
+
+                         <NavBar id="navBar" />
+
+
+             <Video
+             id="videoPlayer"
+            
+             translation="[0,0]"
+             visible="false"
+             />
+
+             <Group id="noFavGroup" translation="[0,0]" width="1920" height="1080" visible="false" >
+             <Button id="btnHome" translation="[612,212]" height="656" minWidth="696"
+            maxWidth="696" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/NoFav.png"
+            focusFootprintBitmapUri="pkg:/images/NoFavUF.png" />
+
+             </Group>
+
+  </children>
+</component>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MenuScreen" extends="Group"  >
+  <script type="text/brightscript" uri="pkg:/components/MenuScreen.brs" />
+  <script type="text/brightscript" uri="pkg:/components/NavBar.brs" />
+	
+
+
+  <interface>
+             <field id="btnChannelsSelected" type="intarray" alias="btnChannels.buttonSelected"  />
+             <field id="btnMoviesSelected" type="intarray" alias="btnMovies.buttonSelected"  />
+             <field id="btnSeriesSelected" type="intarray" alias="btnSeries.buttonSelected"  />
+             <field id="btnPlaylistSelected" type="intarray" alias="btnPlaylist.buttonSelected"  />
+             <field id="btnLinkSelected" type="intarray" alias="btnLink.buttonSelected"  />
+            <field id="SelectedOption" type="string" />
+          
+
+
+
+
+  </interface>
+  <children>
+           <Rectangle color="#000000" width="1920" height="1080" translation="[0,0]" />
+
+<Button id="btnChannels" translation="[256,164]" height="737" minWidth="503"
+            maxWidth="503" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnChF.png"
+            focusFootprintBitmapUri="pkg:/images/btnChUF.png" />
+
+            <Button id="btnMovies" translation="[764,164]" height="366" minWidth="503"
+            maxWidth="503" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnMoF.png"
+            focusFootprintBitmapUri="pkg:/images/btnMoUF.png" />
+
+     <Button id="btnSeries" translation="[1271,164]" height="366" minWidth="503"
+            maxWidth="503" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnSeF.png"
+            focusFootprintBitmapUri="pkg:/images/btnSeUF.png" />
+      <Button id="btnPlaylist" translation="[764,534]" height="366" minWidth="503"
+            maxWidth="503" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnHiF.png"
+            focusFootprintBitmapUri="pkg:/images/btnHiUF.png" />
+            <Button id="btnLink" translation="[1271,534]" height="366" minWidth="503"
+            maxWidth="503" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnSuF.png"
+            focusFootprintBitmapUri="pkg:/images/btnSuUF.png" />
+     
+         <BusySpinner
+      id = "menuSpinner"
+       />
+        <NavBar id="navBar" />
+  </children>
+</component>

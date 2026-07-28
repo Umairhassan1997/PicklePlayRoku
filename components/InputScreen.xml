@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="InputScreen" extends="Group" initialFocus="btnm3u" >
+  <script type="text/brightscript" uri="pkg:/components/InputScreen.brs" />
+	<script type="text/brightscript" uri="pkg:/components/VerifySubscription.brs" />
+	<script type="text/brightscript" uri="pkg:/components/Managers/SubscriptionManager.brs" />
+  
+  <interface>
+    <field id="isSubscribed" type="boolean" alwaysNotify="true" />
+
+  </interface>
+  <children>
+    <Poster uri="pkg:/images/InputSBG.png" translation="[0,0]" width="1920" height="1080" />
+      
+
+      <Button id="btnm3u" translation="[116,631]" height="96" minWidth="536"
+            maxWidth="536" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/mlf.png"
+            focusFootprintBitmapUri="pkg:/images/mluf.png" >
+
+            </Button>
+            <Button id="btnsq" translation="[116,754]" height="96" minWidth="536"
+            maxWidth="536" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/sqf.png"
+            focusFootprintBitmapUri="pkg:/images/squf.png" >
+
+            </Button>
+            
+
+            
+            <Group id="inputKeyBoardGroup" visible="false">
+            <Rectangle translation="[0,0]" width="1920" height="1080" color="#121213" opacity="0.8"/>
+             <DynamicKeyboard id="inputkeyboard" translation="[300,500]" domain="generic" />
+
+
+   <Button id="btnSubmitKey" translation="[818,954]" height="80" minWidth="284"
+            maxWidth="284" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnSUbmitF.png"
+            focusFootprintBitmapUri="pkg:/images/btnSubmitUF.png" />
+
+</Group>
+            
+
+              <Group id="inputGroup" translation="[1106,474]" >
+
+                <Button id="btnplaylist" translation="[52,0]" height="96" minWidth="540"
+            maxWidth="540" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/tff.png"
+            focusFootprintBitmapUri="pkg:/images/tfuf.png" >
+                 <Label id="btnplaylistText"  translation="[32,24]" width="476" height="48" horizAlign="left" vertalign="center" wrap="true"   color="#8E918F" text="Playlist Name"  />
+
+            </Button>
+
+             <Button id="btnlink" translation="[52,120]" height="96" minWidth="540"
+            maxWidth="540" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/tff.png"
+            focusFootprintBitmapUri="pkg:/images/tfuf.png" >
+                 <Label id="btnlinkText" text="M3U Link" width="476" height="48" horizAlign="left" vertalign="center" wrap="true"  translation="[32,24]" color="#8E918F"  />
+
+            </Button>
+
+              <Button id="btnGetUrls" translation="[52,240]" height="31" minWidth="533"
+            maxWidth="533" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnUrlsF.png"
+            focusFootprintBitmapUri="pkg:/images/btnUrlsUF.png" >
+
+            </Button>
+             <Button id="btnsubmit" translation="[52,308]" height="80" minWidth="540"
+            maxWidth="540" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/sf.png"
+            focusFootprintBitmapUri="pkg:/images/suf.png" >
+
+            </Button>
+
+              </Group>
+
+              <qrCode id="apiQr" visible="false" translation="[1238,452]" text="https://www.paramountplus.com/" />
+             <Timer id="checkTimer" duration="2" repeat="false" />
+
+    <Group id="urlsGroup" visible="false">
+      <Rectangle translation="[0,0]" width="1920" height="1080" color="#000000"  />
+      <LabelList
+        id="categoryList"
+        itemSize="[1500,50]"
+        translation="[100, 150]"
+        onItemSelected="onCategorySelected"
+      />
+      <Label
+        text="Select any category from the list to auto-fill its link in the form. You'll just need to set a name for your playlist.
+Press the Back button to return and continue with your setup."
+        width="1920" height="200" horizAlign="center" vertalign="center" wrap="true"
+        translation="[0,900]" color="#8E918F" />
+
+    </Group>
+
+
+    <!-- <Button id="btnsq" translation="[58,351]" height="40" minWidth="105"
+            maxWidth="105" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnGSF.png"
+            focusFootprintBitmapUri="pkg:/images/btnGSUF.png" />
+            <Button id="btnpn" translation="[58,351]" height="40" minWidth="105"
+            maxWidth="105" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnGSF.png"
+            focusFootprintBitmapUri="pkg:/images/btnGSUF.png" />
+            <Button id="btnurl" translation="[58,351]" height="40" minWidth="105"
+            maxWidth="105" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnGSF.png"
+            focusFootprintBitmapUri="pkg:/images/btnGSUF.png" /> -->
+  </children>
+</component>

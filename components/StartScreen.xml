@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="StartScreen" extends="Scene" >
+  <script type="text/brightscript" uri="pkg:/components/StartScreen.brs" />
+	<script type="text/brightscript" uri="pkg:/components/VerifySubscription.brs" />
+    <script type="text/brightscript" uri="UI/ScreenStack.brs" />
+     <script type="text/brightscript" uri="UI/ShowInputScreen.brs" />
+     <script type="text/brightscript" uri="UI/ShowInputNavScreen.brs" />
+    <script type="text/brightscript" uri="UI/ShowHomeScreen.brs" />
+     <script type="text/brightscript" uri="UI/ShowRecentScreen.brs" />
+     <script type="text/brightscript" uri="UI/ShowFavoriteScreen.brs" />
+     <script type="text/brightscript" uri="UI/ShowSettingScreen.brs" />
+     <script type="text/brightscript" uri="UI/ShowSubscriptionScreen.brs" />
+      <script type="text/brightscript" uri="UI/ShowMenuScreen.brs" />
+      <script type="text/brightscript" uri="UI/ShowPlaylistScreen.brs" />
+      <script type="text/brightscript" uri="UI/ShowSearchScreen.brs" />
+      <script type="text/brightscript" uri="UI/ShowLivePlayerScreen.brs" />
+      <script type="text/brightscript" uri="UI/VerifySub.brs" />
+      <script type="text/brightscript" uri="Managers/ChannelManager.brs" />
+      <script type="text/brightscript" uri="Managers/UsageTimerManager.brs" />
+      <script type="text/brightscript" uri="Managers/SubscriptionManager.brs" />
+
+
+  <interface>
+    
+          <function name="ShowInputScreen" />
+          <function name="ShowSettingScreen" />
+          <function name="ShowSubscriptionScreen" />
+          <function name="EraseScreenStack" />
+          <function name="ShowInputNavScreen" />
+          <function name="ShowFavoriteScreen" />
+          <function name="CallMenuScreen" />
+            <function name="ShowHomeScreen" />
+            <function name="ShowRecentScreen" />
+            <function name="ShowMenuScreen" />
+            <function name="ShowPlaylistScreen" />
+            <function name="ShowSearchScreen" />
+            <function name="ShowLivePlayerScreen" />
+            <function name="RouteOnLaunch" />
+            <field id="OptionSelected" type="string" />
+            <field id="isSubscribed" type="boolean" />
+            <field id="Mac" type="string" />
+            <field id="AppLimit" type="integer" />
+            <field id="isSubYearly" type="boolean" />
+
+
+
+
+
+  </interface>
+  <children>
+    <Rectangle id="splashBackground" width="1920" height="1080" color="0x000000" />
+
+    <BusySpinner id="launchSpinner" translation="[900,490]" visible="true" />
+
+    <Group id="landingGroup" visible="false">
+      <Poster uri="pkg:/images/HomeScreen.png" width="1920" height="1080" translation="[0,0]" />
+
+      <Button id="btnGS" translation="[116,702]" height="80" minWidth="209"
+            maxWidth="209" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnGSF.png"
+            focusFootprintBitmapUri="pkg:/images/btnGSUF.png" />
+
+            <Button id="btnWT" translation="[380,702]" height="80" minWidth="267"
+            maxWidth="267" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnWTF.png"
+            focusFootprintBitmapUri="pkg:/images/btnWTUF.png" />
+
+            <Button id="btnTac" translation="[116,982]" height="20" minWidth="237"
+            maxWidth="237" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/tac.png"
+            focusFootprintBitmapUri="pkg:/images/.png" />
+
+            
+             <Video
+             id="videoPlayer"
+            
+             translation="[0,0]"
+             visible="false"
+             />
+    </Group>
+     
+  </children>
+</component>

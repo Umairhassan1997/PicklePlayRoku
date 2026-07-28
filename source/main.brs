@@ -1,0 +1,16 @@
+sub Main()
+    screen = CreateObject("roSGScreen")
+    m.port = CreateObject("roMessagePort")
+    screen.SetMessagePort(m.port)
+    
+    scene = screen.CreateScene("StartScreen")
+    screen.Show()
+  
+    while true
+      msg = wait(0, m.port)
+      if type(msg) = "roSGScreenEvent" and msg.isScreenClosed()
+        exit while
+      end if
+    end while
+  end sub
+  

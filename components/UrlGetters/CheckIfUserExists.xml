@@ -1,0 +1,12 @@
+<component name="UserCheckerTask" extends="Task">
+    <script type="text/brightscript" uri="CheckIfUserExists.brs" />
+
+    <interface>
+        <field id="arrayObject" type="assocarray" />
+        <field id="isError" type="boolean" />
+
+    </interface>
+
+    
+    
+</component>

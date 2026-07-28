@@ -1,0 +1,39 @@
+<component name="Navbar" extends="Group">
+    <script type="text/brightscript"  />
+
+<children>
+    <Poster uri="pkg:/images/NavBar.png" width="158" height="1080" translation="[0,0]" />
+
+     <Button id="btnSearchN" translation="[24,252]" height="96" minWidth="112"
+            maxWidth="112" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnSeaF.png"
+            focusFootprintBitmapUri="pkg:/images/btnSeauf.png" />
+    <Button id="btnHomeN" translation="[24,372]" height="96" minWidth="112"
+            maxWidth="112" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnHoF.png"
+            focusFootprintBitmapUri="pkg:/images/btnHouf.png" />
+
+            <Button id="btnPlaylistN" translation="[24,492]" height="96" minWidth="112"
+            maxWidth="112" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnPlF.png"
+            focusFootprintBitmapUri="pkg:/images/btnPluf.png" />
+
+            <Button id="btnFavN" translation="[24,612]" height="96" minWidth="112"
+            maxWidth="112" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnFavF.png"
+            focusFootprintBitmapUri="pkg:/images/btnFavuf.png" />
+
+            <Button id="btnInputN" translation="[24,732]" height="96" minWidth="112"
+            maxWidth="112" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnIpF.png"
+            focusFootprintBitmapUri="pkg:/images/btnIpuf.png" />
+
+            <Button id="btnSettingN" translation="[24,944]" height="112" minWidth="112"
+            maxWidth="112" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnSeTF.png"
+            focusFootprintBitmapUri="pkg:/images/btnSeTuf.png" />
+
+
+</children>
+    
+</component>

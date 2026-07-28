@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="SearchScreen" extends="Group" initialFocus="inputkeyboard"  >
+  <script type="text/brightscript" uri="pkg:/components/SearchScreen.brs" />
+    <script type="text/brightscript" uri="pkg:/components/NavBar.brs" />
+
+  
+  <interface>
+    <field id="isSubscribed" type="boolean" alwaysNotify="true" />
+        <field id="btnHomeSelected" alias="btnHome.buttonSelected" />
+
+
+  </interface>
+  <children>
+                <Rectangle translation="[0,0]" width="1920" height="1080" color="#000000" ></Rectangle>
+
+
+    <Group id="inputGroup" translation="[0,0]" width="1920" height="1080" >
+
+     <Button id="btnName" translation="[238,96]" height="136" minWidth="1444"
+            maxWidth="1444" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/SearchBar.png"
+            focusFootprintBitmapUri="pkg:/images/SearchBar.png" >
+                 <Label id="labelName"  translation="[120,40]" width="1224" height="56" horizAlign="left" vertalign="center" wrap="true"   color="#FFFFFF" text="Search by name"  />
+    </Button>
+
+               <DynamicKeyboard id="inputkeyboard" translation="[270,300]" domain="generic" />
+               <Button id="btnSubmit" translation="[818,764]" height="80" minWidth="284"
+            maxWidth="284" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnSUbmitF.png"
+            focusFootprintBitmapUri="pkg:/images/btnSubmitUF.png" />
+   
+
+
+               </Group>
+
+               <Group id="ResultsGroup" visible="false" translation="[0,0]" width="1920" height="1080" >
+                <Rectangle translation="[0,0]" width="1920" height="1080" color="#121212" ></Rectangle>
+                 <MarkupGrid 
+            id="searchChannelGrid"
+            translation="[160,160]"
+            itemComponentName = "PackItem"
+            numColumns = "4"
+            numRows="3"
+            itemSize = "[424, 281]"
+            itemSpacing = "[ 10, 120 ]"
+             visible = "true"
+             drawFocusFeedback="false"
+             focusBitmapUri="pkg:/images/ThF.png" />
+
+
+             <Video
+             id="videoPlayer"
+            
+             translation="[0,0]"
+             visible="false"
+             />
+
+              <Group id="noContGroup" translation="[0,0]" width="1920" height="1080" visible="false" >
+             <Button id="btnHome" translation="[612,212]" height="656" minWidth="696"
+            maxWidth="696" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/NoCont.png"
+            focusFootprintBitmapUri="pkg:/images/NoContUF.png" />
+
+             </Group>
+               </Group>
+              <NavBar id="navBar" />
+
+
+
+
+
+
+    </children>
+    </component>

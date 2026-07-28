@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<component name = "gridTask" extends = "Task">
+
+  <interface>
+    <field id = "content" type = "node" alwaysNotify="true" />
+    <field id = "channels" type = "array" />
+    <field id = "optionSelected" type = "string" />
+    <field id = "batchSize" type = "integer" />
+    <field id = "loadedIndex" type = "integer" />
+
+  </interface>
+  
+  <script type="text/brightscript" uri="gridTask.brs" />
+
+</component>

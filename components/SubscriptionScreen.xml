@@ -1,0 +1,31 @@
+<component name="SubscriptionScreen" extends="Group" initialFocus="btnMonthly">
+    <script type="text/brightscript" uri="SubscriptionScreen.brs" />
+
+    <interface>
+                <field id="btnSubSelected" alias="btnSub.buttonSelected" />
+
+        
+    </interface>
+
+    <children>
+                <Rectangle width="1920" height="1080" translation="[0,0]" color="#121213" />
+
+<Poster  uri="pkg:/images/subBG.png" translation="[610,74]" width="700" height="394" />
+<Poster  uri="pkg:/images/subtext.png" translation="[468,808]" width="984" height="94" />
+ <Button id="btnMonthly" translation="[608,492]" height="292" minWidth="332"
+            maxWidth="332" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/MUF.png"
+            focusFootprintBitmapUri="pkg:/images/MUUF.png" />
+
+             <Button id="btnYearly" translation="[980,492]" height="292" minWidth="332"
+            maxWidth="332" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/YUF.png"
+            focusFootprintBitmapUri="pkg:/images/YUUF.png" />
+
+            <Button id="btnSub" translation="[760,926]" height="80" minWidth="400"
+            maxWidth="400" iconUri="" focusedIconUri="" showFocusFootprint="true"
+            focusBitmapUri="pkg:/images/btnsbsF.png"
+            focusFootprintBitmapUri="pkg:/images/btnsbsUF.png" />
+
+    </children>
+</component>
