@@ -4,272 +4,212 @@ function GetLiveChannelList() as Object
     return [
         {
             id: "1"
-            title: "ENHDTV"
-            streamUrl: "https://live.enhdtv.com:8081/8150/index.m3u8"
+            title: "Raycom"
+            streamUrl: "https://raycom-accdn-firetv.amagi.tv/playlist.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "2"
-            title: "Enetres"
-            streamUrl: "https://play.cdn.enetres.net/9E9557EFCEBB43A89CEC8FBD3C500247022/028/playlist.m3u8"
+            title: "Multistream"
+            streamUrl: "https://webstream.multistream.it/memfs/e2cb3629-c1a2-495b-b43a-9eb386f04ed8.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "3"
-            title: "DPS Go 1"
-            streamUrl: "https://origin.dpsgo.com/ssai/event/GI-9cp_bT8KcerLpZwkuhw/master.m3u8"
+            title: "Stream Hosting"
+            streamUrl: "https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "4"
-            title: "DPS Go 2"
-            streamUrl: "https://origin.dpsgo.com/ssai/event/Nftd0fM2SXasfDlRphvUsg/master.m3u8"
+            title: "BEK Prime"
+            streamUrl: "https://cdn3.wowza.com/5/ZWQ1K2NYTmpFbGsr/BEK-WOWZA-1/smil:BEKPRIMEW.smil/playlist.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "5"
-            title: "DPS Go 3"
-            streamUrl: "https://origin.dpsgo.com/ssai/event/cKWySXKgSK-SzlJmESkOWw/master.m3u8"
+            title: "Belarus 5"
+            streamUrl: "https://ngtrk.dc.beltelecom.by/ngtrk/smil:belarus5.smil/playlist.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "6"
-            title: "DPS Go 4"
-            streamUrl: "https://origin.dpsgo.com/ssai/event/LhHrVtyeQkKZ-Ye_xEU75g/master.m3u8"
+            title: "Colimdo TV"
+            streamUrl: "https://cnn.livestreaminggroup.info:3132/live/colimdotvlive.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "7"
-            title: "DPS Go 5"
-            streamUrl: "https://origin.dpsgo.com/ssai/event/g7_JOM0ORki9SR5RKHe-Kw/master.m3u8"
+            title: "Cricket Gold"
+            streamUrl: "https://streams2.sofast.tv/ptnr-yupptv/title-cricketgold/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/b2048bb8-1686-4432-aa50-647245383e0c/manifest.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "8"
-            title: "DPS Go 6"
-            streamUrl: "https://origin.dpsgo.com/ssai/event/f4TrySe8SoiGF8Lu3EIq1g/master.m3u8"
+            title: "CRTV Chile"
+            streamUrl: "https://stmv2.voxtvhd.com.br/crtvchile/crtvchile/playlist.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "9"
-            title: "Enlace BPB TV"
-            streamUrl: "https://v2.tustreaming.cl/enlacebpbtv/index.m3u8"
+            title: "Zype Live"
+            streamUrl: "https://na.linear.zype.com/e0bd0e23-a958-4e43-8164-4f2fef8876a8/fd3614bd-90bf-4530-a277-65ae3a1720c8-zype/live.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "10"
-            title: "CN247 TV"
-            streamUrl: "https://panel.host-live.com:19360/cn247tv/cn247tv.m3u8"
+            title: "Fast and Funbox"
+            streamUrl: "https://dash3.antik.sk/live/test_fast_and_funbox_medium_atk/playlist.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "11"
-            title: "360 RF TVCR"
-            streamUrl: "https://acceso.mediosdecostarica.com:3638/live/360rftvcrlive.m3u8"
+            title: "FIFA Plus German"
+            streamUrl: "https://4397879b.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWRlX0ZJRkFQbHVzR2VybWFuX0hMUw/playlist.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "12"
-            title: "A7 TV Jarabacoa"
-            streamUrl: "https://183.bozztv.com/ssh101/ssh101/a7tvjarabacoa/playlist.m3u8"
+            title: "FIFA 7"
+            streamUrl: "https://d2w9q46ikgrcwx.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-of5cbk3sav3w5/v1/sysdata_s_p_a_fifa_7/samsungheadend_us/latest/main/hls/playlist.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "13"
-            title: "ABTV Bariloche"
-            streamUrl: "https://videostream.shockmedia.com.ar/hls/abtvbariloche/abtvbariloche.m3u8"
+            title: "FloSports"
+            streamUrl: "https://amg02278-amg02278c1-flosports-worldwide-7592.playouts.now.amagi.tv/playlist.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "14"
-            title: "Activa TV"
-            streamUrl: "https://streamtv.mediasector.es/hls/activatv/index.m3u8"
+            title: "FOX Soccer Plus"
+            streamUrl: "https://gpuserver3.tier1streams.com/FOX_SOCCER_PLUS/index.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "15"
-            title: "TMC Creativos"
-            streamUrl: "https://videoserver.tmcreativos.com:19360/mbcrtzxnxd/mbcrtzxnxd.m3u8"
+            title: "Fuel TV"
+            streamUrl: "https://amg01074-fueltv-fueltvemeaen-rakuten-b6j62.amagi.tv/hls/amagi_hls_data_rakutenAA-fueltvemeaen/CDN/master.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "16"
-            title: "Cliente TV"
-            streamUrl: "https://s5.mexside.net:1936/clientetv/clientetv/playlist.m3u8"
+            title: "Horse TV"
+            streamUrl: "https://a-cdn.klowdtv.com/live2/horsetv_720p/playlist.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "17"
-            title: "ADN TV"
-            streamUrl: "https://redirector.rudo.video/hls-video/931b584451fa6dd1313ee66efbfd5802e3f3bcea/adntv/adntv.smil/playlist.m3u8"
+            title: "Motorsport 1"
+            streamUrl: "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg02873-kravemedia-mtrspt1-distrotv/playlist.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "18"
-            title: "AE Radio"
-            streamUrl: "https://tls-cl.cdnz.cl/aeradio/live/playlist.m3u8"
+            title: "Sofast Live"
+            streamUrl: "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/fdd6f243-f971-4a1a-9510-97ac01d6b37f/manifest.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "19"
-            title: "Agape"
-            streamUrl: "https://5fc584f3f19c9.streamlock.net/agape/smil:agape.smil/playlist.m3u8"
+            title: "Sports Plus"
+            streamUrl: "https://kwtspta.cdn.mangomolo.com/sp/smil:sp.stream.smil/chunklist.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "20"
-            title: "AGR TV"
-            streamUrl: "https://tigocloud.desdeparaguay.net/agrtv/agrtv/playlist.m3u8"
+            title: "Sports Plus Live"
+            streamUrl: "https://kwtsplta.cdn.mangomolo.com/spl/smil:spl.stream.smil/chunklist.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "21"
-            title: "Interven Hosting"
-            streamUrl: "https://streamtv.intervenhosting.net:3040/hybrid/play.m3u8"
+            title: "Marquee Sports"
+            streamUrl: "https://gpuserver3.tier1streams.com/MARQUEE_SPORTS_NETWORK/index.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "22"
-            title: "Ahora TV"
-            streamUrl: "https://stream.haislin.com/ahoratv/index.m3u8"
+            title: "MLB Network"
+            streamUrl: "https://gpuserver3.tier1streams.com/MLB_Network/index.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "23"
-            title: "Aire de Santa Fe TV"
-            streamUrl: "https://unlimited1-us.dps.live/airedesantafetv/airedesantafetv.smil/playlist.m3u8"
+            title: "VG Live"
+            streamUrl: "https://streams2.sofast.tv/vglive-sk-462904/playlist.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "24"
-            title: "Alcance TV"
-            streamUrl: "https://5bf8041cb3fed.streamlock.net/AlcanceTV/AlcanceTV/playlist.m3u8"
+            title: "JCP Live"
+            streamUrl: "https://h.jcp.live.opencaster.com/play_src/index.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "25"
-            title: "Alcarrizos TV"
-            streamUrl: "https://5790d294af2dc.streamlock.net/alcarrizostv/alcarrizostv/playlist.m3u8"
+            title: "MNB Sport"
+            streamUrl: "https://live.mnb.mn/hls/mnb_sport.stream.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "26"
-            title: "Alegre TV"
-            streamUrl: "https://streamunoapp.com:3149/live/alegretvlive.m3u8"
+            title: "MTS"
+            streamUrl: "https://mts1.iptv-playoutcenter.de/mts/mts-web/playlist.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "27"
-            title: "MD Stream"
-            streamUrl: "https://mdstrm.com/live-stream-playlist/69b2cdf98815b9b6c48c2532.m3u8"
+            title: "NSPRT"
+            streamUrl: "https://ogc-nsprt-tcl-roku-syndication.otteravision.com/ogc/nsprt/nsprt.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "28"
-            title: "Haislin Live"
-            streamUrl: "https://stream.haislin.com/ls_j3BOKxBbUJ/index.m3u8"
+            title: "Nautical TV"
+            streamUrl: "https://a-cdn.klowdtv.com/live2/nautical_720p/playlist.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "29"
-            title: "Bitsur"
-            streamUrl: "https://streaming.bitsur.cl:3534/live/vdo1102live.m3u8"
+            title: "NBA TV"
+            streamUrl: "https://cdn1.ayitistream.com/NBATV/index.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "30"
-            title: "Amaga Television"
-            streamUrl: "https://viewhn.com/amagatelevision/sdfUYWKegHKRPpSirG/playlist.m3u8"
+            title: "Live Stream"
+            streamUrl: "https://d11k1mnrgfposz.cloudfront.net/playlist.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "31"
-            title: "Amazonia TV"
-            streamUrl: "https://servilive.com:3199/live/amazoniatvlive.m3u8"
+            title: "Rally TV"
+            streamUrl: "https://rally-tv-live.akamaized.net/hls/live/2117704/RallyTV-Pri/master.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "32"
-            title: "AME 47"
-            streamUrl: "https://ss2.tvrdomi.com:1936/ame47/ame47/playlist.m3u8"
+            title: "RMTV"
+            streamUrl: "https://rmtv.akamaized.net/hls/live/2043154/rmtv-en-web/bitrate_3.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "33"
-            title: "America Estereo Guayaquil"
-            streamUrl: "https://video.makrodigital.com/americaestereoguayaquil/americaestereoguayaquil/playlist.m3u8"
+            title: "S Sport"
+            streamUrl: "https://corestream.siteyaptim.live/s-sport/index.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "34"
-            title: "America Estereo Ibarra"
-            streamUrl: "https://video.makrodigital.com/americaestereoibarra/americaestereoibarra/playlist.m3u8"
+            title: "S Sport 2"
+            streamUrl: "https://corestream.siteyaptim.live/s-sport2/index.m3u8"
             logo: "pkg:/images/HeroItem.png"
         },
         {
             id: "35"
-            title: "America Teve 2"
-            streamUrl: "https://live.gideo.video/americateve2/master.m3u8"
-            logo: "pkg:/images/HeroItem.png"
-        },
-        {
-            id: "36"
-            title: "Cablevision Robles"
-            streamUrl: "https://antmedia.cablevisionrobles.com:5443/LiveApp/streams/CqwAgRagMvBNYN8c1731608980342.m3u8"
-            logo: "pkg:/images/HeroItem.png"
-        },
-        {
-            id: "37"
-            title: "Bolivia Play"
-            streamUrl: "https://stv2.boliviaplay.com.bo/hls/stream.m3u8"
-            logo: "pkg:/images/HeroItem.png"
-        },
-        {
-            id: "38"
-            title: "ANC TV"
-            streamUrl: "https://live.amelbatv.co:81/anctvlive/index.m3u8"
-            logo: "pkg:/images/HeroItem.png"
-        },
-        {
-            id: "39"
-            title: "CloudFront 1"
-            streamUrl: "https://d3gie3ig6argu.cloudfront.net/ts:abr.m3u8"
-            logo: "pkg:/images/HeroItem.png"
-        },
-        {
-            id: "40"
-            title: "CloudFront 2"
-            streamUrl: "https://d1ypfac91iuc9g.cloudfront.net/ts:abr.m3u8"
-            logo: "pkg:/images/HeroItem.png"
-        },
-        {
-            id: "41"
-            title: "Antena Seis TV"
-            streamUrl: "https://video1.azulstream.com:8081/antenaseistv/index.m3u8"
-            logo: "pkg:/images/HeroItem.png"
-        },
-        {
-            id: "42"
-            title: "CloudPro"
-            streamUrl: "https://cloudpro.servidoresdestream.com:8081/8010/index.m3u8"
-            logo: "pkg:/images/HeroItem.png"
-        },
-        {
-            id: "43"
-            title: "GRD"
-            streamUrl: "https://5ca9af4645e15.streamlock.net/grd/videogrd/playlist.m3u8"
-            logo: "pkg:/images/HeroItem.png"
-        },
-        {
-            id: "44"
-            title: "ATV"
-            streamUrl: "https://unlimited6-cl.dps.live/atv/atv.smil/playlist.m3u8"
-            logo: "pkg:/images/HeroItem.png"
-        },
-        {
-            id: "45"
-            title: "Aragon TV Canal 1"
-            streamUrl: "https://cartv.streaming.aranova.es/hls/live/aragontv_canal1.m3u8"
+            title: "Racing Stream"
+            streamUrl: "https://636ffd31f0e12.streamlock.net/RacingStream1/RacingStream1/playlist.m3u8"
             logo: "pkg:/images/HeroItem.png"
         }
     ]
