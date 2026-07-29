@@ -39,11 +39,8 @@ function GetAppScene() as Object
 end function
 
 function isUserPro() as Boolean
-    scene = GetAppScene()
-    if scene = invalid
-        return false
-    end if
-    return scene.isSubscribed = true
+    ' Subscriptions are not offered — all users have unlimited access
+    return true
 end function
 
 sub OnUserBecamePro()

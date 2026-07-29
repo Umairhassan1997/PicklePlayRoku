@@ -1,4 +1,4 @@
-' LivePlayerScreen — full-screen live TV with channel switching and free-time tracking
+' LivePlayerScreen — full-screen live TV with channel switching
 
 sub init()
     m.scene = m.top.getScene()
@@ -34,19 +34,8 @@ end sub
 
 sub onVisibleChanged()
     if m.top.visible
-        if not isUserPro() and not HasFreeTimeRemaining()
-            onFreeTimeExpired()
-            return
-        end if
-        if isUserPro() or HasFreeTimeRemaining()
-            m.video.setFocus(true)
-            if m.video.state = "playing"
-                ResumeUsageTracking()
-                startUsageTickTimer()
-            end if
-        end if
+        m.video.setFocus(true)
     else
-        ' Pause lifetime timer when another screen covers live TV (e.g. subscription)
         pausePlaybackAndTimer()
     end if
 end sub
@@ -95,28 +84,15 @@ sub onVideoStateChanged()
 
     if state = "buffering"
         m.bufferingSpinner.visible = true
-        PauseUsageTracking()
-        stopUsageTickTimer()
     else if state = "playing"
         m.bufferingSpinner.visible = false
         m.errorLabel.visible = false
         m.switchInProgress = false
         m.playbackRetryCount = 0
-
-        if isUserPro() or HasFreeTimeRemaining()
-            ResumeUsageTracking()
-            startUsageTickTimer()
-        else
-            onFreeTimeExpired()
-        end if
     else if state = "stopped" or state = "finished" or state = "paused"
         m.bufferingSpinner.visible = false
-        PauseUsageTracking()
-        stopUsageTickTimer()
     else if state = "error"
         m.bufferingSpinner.visible = false
-        PauseUsageTracking()
-        stopUsageTickTimer()
         handlePlaybackFailure()
     end if
 end sub
@@ -138,49 +114,20 @@ sub handlePlaybackFailure()
     m.switchInProgress = false
 end sub
 
-sub startUsageTickTimer()
-    if isUserPro()
-        return
-    end if
-    m.usageTickTimer.control = "start"
-end sub
-
 sub stopUsageTickTimer()
     m.usageTickTimer.control = "stop"
 end sub
 
 sub pausePlaybackAndTimer()
-    PauseUsageTracking()
     stopUsageTickTimer()
     if m.video <> invalid
         m.video.control = "stop"
     end if
 end sub
 
-' Fires every second while video is actively playing (free users only)
 sub onUsageTickTimerFire()
-    if isUserPro()
-        stopUsageTickTimer()
-        return
-    end if
-
-    if m.global.isPlaying <> true or m.video.state <> "playing"
-        return
-    end if
-
-    stillHasTime = TickUsageSecond()
-    if not stillHasTime
-        onFreeTimeExpired()
-    end if
-end sub
-
-sub onFreeTimeExpired()
-    PauseUsageTracking()
+    ' Usage limits disabled — no subscription / free-time enforcement
     stopUsageTickTimer()
-    m.video.control = "stop"
-    m.video.visible = false
-    m.top.timeExpired = true
-    m.scene.callFunc("ShowSubscriptionScreen")
 end sub
 
 sub switchToNextChannel()
@@ -210,7 +157,6 @@ function OnKeyEvent(key as String, press as Boolean) as Boolean
             m.video.control = "stop"
             m.video.visible = false
         end if
-        PauseUsageTracking()
         stopUsageTickTimer()
         return true
     end if

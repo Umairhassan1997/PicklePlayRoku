@@ -1,7 +1,7 @@
-' UsageTimerManager — lifetime free viewing allowance (registry-backed)
+' UsageTimerManager — viewing allowance (unlimited; subscriptions not offered)
 
 function GetFreeWatchLimitSeconds() as Integer
-    return 600 ' 10 minutes total for free users
+    return -1 ' unlimited
 end function
 
 function GetUsageRegistrySection() as String
@@ -18,12 +18,12 @@ sub InitUsageTimer()
     m.global.AddField("isPlaying", "boolean", false)
     m.global.AddField("currentChannelIndex", "integer", false)
 
+    ' Clear any previously saved free-time countdown
+    m.global.remainingSeconds = -1
     sec = CreateObject("roRegistrySection", GetUsageRegistrySection())
     if sec.Exists(GetUsageRegistryKey())
-        m.global.remainingSeconds = sec.Read(GetUsageRegistryKey()).ToInt()
-    else
-        m.global.remainingSeconds = GetFreeWatchLimitSeconds()
-        SaveRemainingSeconds(m.global.remainingSeconds)
+        sec.Delete(GetUsageRegistryKey())
+        sec.Flush()
     end if
 
     if m.global.currentChannelIndex = invalid
@@ -33,13 +33,7 @@ sub InitUsageTimer()
 end sub
 
 sub SaveRemainingSeconds(seconds as Integer)
-    if seconds < 0
-        seconds = 0
-    end if
     m.global.remainingSeconds = seconds
-    sec = CreateObject("roRegistrySection", GetUsageRegistrySection())
-    sec.Write(GetUsageRegistryKey(), seconds.ToStr())
-    sec.Flush()
 end sub
 
 function GetRemainingSeconds() as Integer
@@ -50,27 +44,12 @@ function GetRemainingSeconds() as Integer
 end function
 
 function HasFreeTimeRemaining() as Boolean
-    if isUserPro()
-        return true
-    end if
-    return GetRemainingSeconds() > 0
+    return true
 end function
 
-' Consume one second of free time. Returns false when time is exhausted.
+' No-op — viewing time is unlimited
 function TickUsageSecond() as Boolean
-    if isUserPro()
-        return true
-    end if
-
-    remaining = GetRemainingSeconds()
-    if remaining <= 0
-        SaveRemainingSeconds(0)
-        return false
-    end if
-
-    remaining = remaining - 1
-    SaveRemainingSeconds(remaining)
-    return remaining > 0
+    return true
 end function
 
 sub PauseUsageTracking()
@@ -78,10 +57,5 @@ sub PauseUsageTracking()
 end sub
 
 sub ResumeUsageTracking()
-    if isUserPro()
-        return
-    end if
-    if HasFreeTimeRemaining()
-        m.global.isPlaying = true
-    end if
+    ' No usage tracking while subscriptions are disabled
 end sub

@@ -13,7 +13,10 @@ sub init()
     m.splashBackground=m.top.findNode("splashBackground")
     m.launchSpinner.poster.uri="pkg:/images/loader.png"
     showLaunchSplash()
-    VerifySubscription()
+    ' Subscriptions not offered — grant unlimited access and skip ChannelStore check
+    m.top.isSubscribed = true
+    m.global.launchRoutePending = false
+    RouteOnLaunch()
     m.global.m3uLink=""
     m.global.AddField("appName","string",false)
     m.global.AddField("appLaunchCount","integer",false)
@@ -183,7 +186,7 @@ sub CallMenuScreen()
 
 end sub
 
-' Routes free/pro users to Live TV or paywall after splash + subscription check
+' Routes users to Live TV after splash (no subscription paywall)
 sub RouteOnLaunch()
     if m.routedOnLaunch=true
         return
@@ -196,13 +199,7 @@ sub RouteOnLaunch()
         m.video.visible=false
     end if
 
-    if isUserPro()
-        ShowLivePlayerScreen()
-    else if GetRemainingSeconds()<=0
-        ShowSubscriptionScreen()
-    else
-        ShowLivePlayerScreen()
-    end if
+    ShowLivePlayerScreen()
 end sub
 
 sub hideLandingUi()
